@@ -93,6 +93,12 @@
                             Pengampu
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ route('jadwal-akademik.index') }}"
+                            class="@if (Route::is('jadwal-akademik.index')) bg-white text-red-500 @else @endif flex items-center p-2 pl-11 w-full text-base font-medium rounded-lg transition duration-75 group hover:bg-white hover:text-red-500">
+                            Jadwal Akademik
+                        </a>
+                    </li>
                 </ul>
             </li>
         </ul>

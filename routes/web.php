@@ -6,6 +6,7 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\GolonganController;
+use App\Http\Controllers\JadwalAkademikController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MatakuliahController;
 use App\Http\Controllers\PengampuController;
@@ -37,6 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('dosen', DosenController::class);
     Route::resource('ruang', RuangController::class);
     Route::resource('pengampu', PengampuController::class);
+    Route::resource('jadwal-akademik', JadwalAkademikController::class);
 
 
 
