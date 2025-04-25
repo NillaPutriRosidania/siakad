@@ -8,6 +8,7 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\GolonganController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MatakuliahController;
+use App\Http\Controllers\RuangController;
 use App\Models\Berita;
 
 Route::get('/', function () {
@@ -32,6 +33,10 @@ Route::middleware('auth')->group(function () {
     Route::resource('mahasiswa', MahasiswaController::class);
     Route::resource('matakuliah', MatakuliahController::class);
     Route::resource('dosen', DosenController::class);
+    Route::resource('ruang', RuangController::class);
+
+
+
     Route::get('berita', [BeritaController::class, 'index'])->name('berita.index');
     Route::get('berita/create', [BeritaController::class, 'create'])->name('berita.create');
     Route::post('berita', [BeritaController::class, 'store'])->name('berita.store');
