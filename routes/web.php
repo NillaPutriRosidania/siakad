@@ -1,27 +1,13 @@
 <?php
 
-use App\Http\Controllers\AKBController;
-use App\Http\Controllers\AKIController;
-use App\Http\Controllers\KMeansAKBController;
-use App\Http\Controllers\KMeansAKIController;
-use App\Http\Controllers\KMeansAKI3Controller;
-use App\Http\Controllers\KMeansAKB3Controller;
-use App\Http\Controllers\KMeansAKI4Controller;
-use App\Http\Controllers\KMeansAKB4Controller;
-use App\Http\Controllers\PuskesmasController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\DashboardKadinkesController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\GolonganController;
-use App\Http\Controllers\KecamatanController;
 use App\Http\Controllers\MahasiswaController;
-use App\Http\Controllers\MapsController;
 use App\Http\Controllers\MatakuliahController;
-use App\Http\Controllers\TahunController;
-use App\Models\AKI;
 use App\Models\Berita;
 
 Route::get('/', function () {
@@ -55,7 +41,4 @@ Route::middleware('auth')->group(function () {
     Route::resource('dashboard', DashboardController::class);
     Route::get('/api/charts/{type}/{puskesmasId}', [DashboardController::class, 'getChartData']);
     Route::get('logout', [AuthController::class, 'destroy'])->name('logout');
-
-    //ini untuk kadinkes
-    // Route::resource('dashboardkadinkes', DashboardKadinkesController::class);
 });
