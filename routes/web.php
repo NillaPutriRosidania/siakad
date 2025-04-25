@@ -12,7 +12,7 @@ use App\Models\Berita;
 
 Route::get('/', function () {
     $latestNews = Berita::latest()->paginate(5);
-    return view('welcome', compact('latestNews', 'mapData'));
+    return view('welcome');
 });
 
 
