@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PresensiAkademikController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
@@ -7,12 +8,14 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\GolonganController;
 use App\Http\Controllers\JadwalAkademikController;
+use App\Http\Controllers\KRSController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MatakuliahController;
 use App\Http\Controllers\PengampuController;
 use App\Http\Controllers\RuangController;
 use App\Models\Berita;
 use App\Models\Pengampu;
+use App\Models\PresensiAkademik;
 
 Route::get('/', function () {
     $latestNews = Berita::latest()->paginate(5);
@@ -39,6 +42,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('ruang', RuangController::class);
     Route::resource('pengampu', PengampuController::class);
     Route::resource('jadwal-akademik', JadwalAkademikController::class);
+    Route::resource('krs', KRSController::class);
+    Route::resource('presensi-akademik', PresensiAkademikController::class);
 
 
 

@@ -27,4 +27,9 @@ class Mahasiswa extends Model
     {
         return $this->belongsTo(Golongan::class, 'id_Gol', 'id_Gol');
     }
+
+    public function presensiAkademik()
+    {
+        return $this->hasMany(PresensiAkademik::class, 'NIM', 'NIM');
+    }
 }

@@ -8,24 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Matakuliah extends Model
 {
     use HasFactory;
-
-    // Tentukan nama tabel (bisa diabaikan jika nama tabel sudah sesuai dengan konvensi)
     protected $table = 'matakuliah';
-
-    // Tentukan primary key
     protected $primaryKey = 'Kode_mk';
-
-    // Tentukan kolom yang bisa diisi massal
     protected $fillable = [
-        'kode_mk',  // Pastikan nama sesuai dengan input form
+        'kode_mk',
         'nama_mk',
         'sks',
         'semester',
     ];
-
-    // Tentukan tipe data primary key
-    protected $keyType = 'string';  // Sesuaikan jika memang Kode_mk adalah string
-
-    // Menonaktifkan fitur timestamps jika tidak ada kolom created_at dan updated_at
-    public $timestamps = true;  // Jika ada kolom created_at dan updated_at di tabel
+    protected $keyType = 'string';
+    public $timestamps = true;
+    public function presensiAkademik()
+    {
+        return $this->hasMany(PresensiAkademik::class, 'Kode_mk', 'Kode_mk');
+    }
 }

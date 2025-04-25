@@ -99,6 +99,18 @@
                             Jadwal Akademik
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ route('krs.index') }}"
+                            class="@if (Route::is('krs.index')) bg-white text-red-500 @else @endif flex items-center p-2 pl-11 w-full text-base font-medium rounded-lg transition duration-75 group hover:bg-white hover:text-red-500">
+                            KRS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('presensi-akademik.index') }}"
+                            class="@if (Route::is('presensi-akademik.index')) bg-white text-red-500 @else @endif flex items-center p-2 pl-11 w-full text-base font-medium rounded-lg transition duration-75 group hover:bg-white hover:text-red-500">
+                            Presensi
+                        </a>
+                    </li>
                 </ul>
             </li>
         </ul>

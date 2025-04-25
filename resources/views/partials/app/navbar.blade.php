@@ -42,8 +42,8 @@
                 <span class="sr-only">Toggle sidebar</span>
             </button>
             <a href="/" class="flex items-center justify-between mr-4">
-                <img src="{{ asset('assets/img/JMCkotak.png') }}" class="mr-3 h-8" alt="Flowbite Logo" />
-                <span class="self-center text-white text-2xl font-bold whitespace-nowrap">JMC</span>
+                <img src="{{ asset('assets/img/logo_polije.png') }}" class="mr-3 h-8" alt="Flowbite Logo" />
+                <span class="self-center text-white text-2xl font-bold whitespace-nowrap">SIAKAD POLIJE</span>
             </a>
         </div>
         <div class="flex items-center lg:order-2">
