@@ -8,8 +8,10 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\GolonganController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MatakuliahController;
+use App\Http\Controllers\PengampuController;
 use App\Http\Controllers\RuangController;
 use App\Models\Berita;
+use App\Models\Pengampu;
 
 Route::get('/', function () {
     $latestNews = Berita::latest()->paginate(5);
@@ -34,6 +36,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('matakuliah', MatakuliahController::class);
     Route::resource('dosen', DosenController::class);
     Route::resource('ruang', RuangController::class);
+    Route::resource('pengampu', PengampuController::class);
 
 
 

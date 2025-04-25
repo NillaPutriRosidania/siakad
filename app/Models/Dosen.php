@@ -28,4 +28,9 @@ class Dosen extends Model
 
     // Menyertakan timestamps jika menggunakan kolom created_at dan updated_at
     public $timestamps = true;
+
+    public function pengampu()
+    {
+        return $this->hasMany(Pengampu::class, 'NIP', 'NIP');
+    }
 }
